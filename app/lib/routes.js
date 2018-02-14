@@ -46,6 +46,10 @@ Router.route('/view1', {
 
 // Route for view2
 Router.route('/view2', {
-    template: 'views_view2',
-    name: 'view2'
+	template: 'views_view2',
+	name: 'view2',
+	data: function() {
+			console.log("exec route to view2");
+                        return License.find();
+                }
 });

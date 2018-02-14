@@ -1,9 +1,36 @@
 <template name="views_view2">
- <div class="row-fluid">
-	<div class="col-md-6">
- 		{{> components_multiplyContract}}
-	</div>
-	<div class="col-md-6">
-	</div>
- </div>
+<div class="panel panel-primary">
+<!-- Default panel contents -->
+        <div class="panel-heading">BDCheck Event Monitor</div>
+        <div class="panel-body">
+                <table class="table table-striped">
+                        <thead>
+                                <tr>
+                                        <th>Date</th>
+                                        <th>DB name</th>
+                                        <th>Table name</th>
+                                        <th>Primary key name</th>
+                                        <th>Primary key value</th>
+					<th>OP type</th>
+                                        <th>blockNumber</th>
+                                        <th>transactionHash</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                {{#each logevent}}
+					<tr>
+                				<td>{{createdAt}}</td>
+                				<td>{{db_name_human}}</td>
+                				<td>{{table_name_human}}</td>
+						<td>{{db_key_name_human}}</td>
+						<td>{{db_key_value_human}}</td>
+						<td>{{db_op_type_human}}</td>
+                				<td>{{blockNumber}}</td>
+                				<td>{{transactionHashHuman}}</td>
+        				</tr>                                        
+                                {{/each}}
+                        </tbody>
+                </table>
+        </div>
+</div>
 </template>
