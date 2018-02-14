@@ -5,7 +5,7 @@ LOG="/opt/call_mysql_audit.log"
 T=$( date +"%Y-%m-%d_%H-%M-%S" )
 echo "exec ${T} Using: $*" >> ${LOG}
 
-DST="/home/al/meteor-dapp-boilerplate/app/server"
+DST="/home/al/meteor-dapp-sql/app/server"
 
 # exec 2017-09-13_15-03-55 Using: digotatortestdb answers Id 55 4e02687e21fe2ed40c1241e9ca0a2993becda6c474cf064eb0e4decb69cb94e9 abc7dc89c30b005dcd7b45e1a20d2729cd8ec12fbbc99ff053eaef5e9b6b350e update 1505304235
  
